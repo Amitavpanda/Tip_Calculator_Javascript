@@ -4,6 +4,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Creepster&family=Mada:wght@500&display=swap" rel="stylesheet" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Acme&family=Creepster&family=Mada:wght@500&display=swap");
+    </style>
     <title>Tip Calculator</title>
 </head>
 
@@ -13,15 +20,15 @@
             <div class="title">Bill Total</div>
             <div class="inputContainer">
                 <span>$</span>
-                <input type="text" id="billTotalAmount" placeholder="0.00" />
+                <input type="text" id="billTotalInput" placeholder="0.00" onkeyup="calculateBill()" />
             </div>
         </div>
 
-        <div class="continer">
+        <div class="container">
             <div class="title">Tip</div>
             <div class="inputContainer">
                 <span>%</span>
-                <input type="text" id="tipTotal" placeholder="10" />
+                <input type="text" id="tipInput" placeholder="10" onkeyup="calculateBill()" />
             </div>
         </div>
 
@@ -31,13 +38,13 @@
                 <div class="controls">
                     <span class="buttonContainer">
               <button class="splitButton">
-                <span class="buttonText">+</span>
+                <span class="buttonText" onclick="increasePeople()">+</span>
                     </button>
                     </span>
                     <span class="splitAmount" id="noOfPeople">1</span>
                     <span class="buttonContainer">
               <button class="splitButton">
-                <span class="buttonText">-</span>
+                <span class="buttonText" onclick="decreasePeople()">-</span>
                     </button>
                     </span>
                 </div>
